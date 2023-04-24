@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <title>Hausaufgabe Woche 2</title>
+    <body>
+        <h1>Hausaufgabe Woche 2</h1>
+        <form>
+            <!--Text eingabe-->
+            <label for="startort">Startort:</label><br>
+            <input type="text" id="startort" name="startort" value="Hamburg"><br><br>
+            <label for="zielort">Zeilort:</label><br>
+            <input type="text" id="zielort" name="zielort" value="Bremen"><br><br>
+
+            <!--Auswahlliste label-->
+            <label for="fahrzeuge">Wählen sie ein Fahrzeug:</label><br>
+
+            <!--Auswahlliste optionen-->
+            <select name="fahrzeuge" id="fahrzeuge">
+                <option value="auto">Auto</option>
+                <option value="fahrrad">Fahrrad</option>
+                <option value="bahn">Bahn</option>
+                <option value="zu_fuß">Zu Fuß</option>
+            </select><br><br>
+
+            <!--Radiobutton-->
+            <input type="radio" id="schnellste_Route" name="route" value="Schnellste_Route">
+            <label for="schnellste_Route">Schnellste Route</label><br>
+            <input type="radio" id="kuerzeste_Route" name="route" value="Kuerzeste_Route">
+            <label for="kuerzeste_Route">Kürzeste Route</label><br><br>
+
+            <!--Sende eingaben-->
+            <input type="submit" value="Senden">
+        </form>
+    </body>
+</html>
