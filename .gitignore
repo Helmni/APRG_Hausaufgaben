@@ -39,7 +39,11 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+HA1/node_modules/
+HA2/node_modules/
+HA3/node_modules/
+HA4/node_modules/
+HA5/node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
@@ -128,18 +132,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-tset/.gitignore at main · Helmni/tset
