@@ -2,33 +2,40 @@
 //INIT express
 const express = require("express");
 const app = express();
-
-//INIT bodyParser
-const bodyParser = require("body-parser");
-const { name } = require("ejs");
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.urlencoded({extended:true}));
 
 //INIT EJS
 app.engine(".ejs", require("ejs").__express);
 app.set("view engine", "ejs");
+
+//INIT SQLITE3
+const DATABASE = "studierende.db";
+const db = require("better-sqlite3")(DATABASE); 
 
 //Started den Webserver
 app.listen(3000, function(){
     console.log("listening on 3000");
 });
 
-app.get("/login", function(req,res){
-    res.sendFile(__dirname + "/views/login.html")
+app.get("/addstudies", function(req,res){
+    res.sendFile(__dirname + "/views/addstudies.html")
 });
 
-app.get("/register", function(req,res){
-    res.sendFile(__dirname + "/views/register.html")
+app.get("/studierende", function(req,res){
+    const rows = db.prepare("SELECT * FROM studierende").all();
+    res.render("studierende", {"studierende": rows});
 });
 
-
-
-
-
+app.post("/addstudieren", function(req,res){
+    const matrikelnum = req.body.matrikelnum;
+    const Vname = req.body.Vname;
+    const Nname = req.body.Nname;
+    const email = req.body.email;
+    const semester = req.body.semester;
+    //SQL Befehl
+    res.render("studierende");
+});
+    
 
 
 

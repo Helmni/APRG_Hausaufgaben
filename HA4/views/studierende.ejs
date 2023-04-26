@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Studierenden Liste</title>
+    </head>
+    <body>
+        <table border = "1">
+            <tr>
+                <th>Matrikelnummer</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>E-Mail-Adresse</th>
+                <th>Semester</th>
+            </tr>
+            <% for (let i = 0; i < studierende.length; i++ ) { %>
+                <tr>
+                    <td> <%= studierende[i].matrikelnummer %></td>
+                    <td> <%= studierende[i].vorname %></td>
+                    <td> <%= studierende[i].nachname %></td>
+                    <td> <%= studierende[i].email %></td>
+                    <td> <%= studierende[i].semester %></td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>

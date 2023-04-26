@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuen Studierenden hinzufügen</title>
+    </head>
+    <body>
+        <form action="/addstudieren" method="POST">
+            <label for="matrikelnummer">Matrikelnummer:</label><br>
+            <input type="text" id="matrikelnummer" name="matrikelnummer" value=><br>
+            <label for="vorname">Vorname:</label><br>
+            <input type="text" id="vorname" name="vorname" value=""><br>
+            <label for="nachname">Nachname:</label><br>
+            <input type="text" id="nachname" name="nachname" value=""><br>
+            <label for="email">E-Mail-Adresse:</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+            <label for="semester">Semester:</label><br>
+            <input type="text" id="semester" name="semester" value=><br><br>
+            <input type="submit" value="Studierenden hinzufügen">
+        </form>
+    </body>
+</html>
